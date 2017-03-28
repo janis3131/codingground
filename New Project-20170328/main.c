@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+int division(int dividend, int divisor, float *rest) {
+    float result = (float)dividend/(float)divisor;
+    *rest = result - (int)result;
+    return result;
+}
 
 void sort4(int *zahl1, int *zahl2, int *zahl3, int *zahl4) {
     int tmp;
