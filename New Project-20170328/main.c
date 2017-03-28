@@ -1,5 +1,26 @@
 #include <stdio.h>
 
+
+void sort4(int *zahl1, int *zahl2, int *zahl3, int *zahl4) {
+    int tmp;
+    int zahlen[4] = {*zahl1, *zahl2, *zahl3, *zahl4};
+    char i, j;
+    
+    for( i=0; i<=3; i++ ) {
+        for(j=i; j <=3; j++) {
+            if(zahlen[i] > zahlen[j]) {
+                tmp = zahlen[j];
+                zahlen[j] = zahlen[i];
+                zahlen[i] = tmp;
+            }
+        }
+    }
+    *zahl1 = zahlen[0];
+    *zahl2 = zahlen[1];
+    *zahl3 = zahlen[2];
+    *zahl4 = zahlen[3];
+    
+}
 unsigned int algorithmus(int zahl1, int zahl2) {
     int AB = zahl1;
     int CD = zahl2;
